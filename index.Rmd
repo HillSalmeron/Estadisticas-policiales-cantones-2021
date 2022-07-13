@@ -1,6 +1,6 @@
 ---
 title: "Estadísticas policiales por cantón 2021"
-author: Hilary Salmerpón Fallas y Pablo César Quirós Rodríguez
+author: Hilary Salmerón Fallas y Pablo César Quirós Rodríguez
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -32,7 +32,7 @@ library(stringi)
 
 ```
 
-```{r Craga de datos, message=FALSE}
+```{r Carga de datos, message=FALSE}
 Est_policiales <-
   read_xls("estadisticaspoliciales2021.xls")
 
@@ -127,7 +127,7 @@ cantones_delitos <-
 # Sección para colores del mapa
 
 colores_cantones_delitos <-
-  colorNumeric(palette = "Blues",
+  colorNumeric(palette = "Reds",
                domain = cantones_delitos$delitos,
                na.color = "transparent")
 
