@@ -42,6 +42,7 @@ cantones <-
     quiet = TRUE
   ) %>%
   st_transform(4326) # transformación a WGS84
+
 ```
 
 Página 1
@@ -184,6 +185,7 @@ Column {data-width=650}
 -----------------------------------------------------------------------
 
 ### Tabla DT interactiva sobre estadísticas policiales.
+Fuente: [Datos abiertos Organismo de Investigación Judicial(OIJ)](https://sitiooij.poder-judicial.go.cr/index.php/ayuda/servicios-policiales/servicios-a-organizaciones/indice-de-transparencia-del-sector-publico-costarricense/datos-abiertos) [Instituto Geográfico Nacional(IGN)](https://gf0604-procesamientodatosgeograficos.github.io/2022-i/datos/ign/delimitacion-territorial-administrativa/cantones_simplificados.geojson)
 
 ```{r}
 Est_policiales %>%
@@ -207,6 +209,7 @@ Column {data-width=350}
 -----------------------------------------------------------------------
 
 ### Gráfico de barras simples sobre la cantidad de delitos según el tipo.
+Fuente: [Datos abiertos Organismo de Investigación Judicial(OIJ)](https://sitiooij.poder-judicial.go.cr/index.php/ayuda/servicios-policiales/servicios-a-organizaciones/indice-de-transparencia-del-sector-publico-costarricense/datos-abiertos) [Instituto Geográfico Nacional(IGN)](https://gf0604-procesamientodatosgeograficos.github.io/2022-i/datos/ign/delimitacion-territorial-administrativa/cantones_simplificados.geojson)
 
 ```{r Gráfico cantidad de delitos por tipo de delito, message=FALSE}
 Delitos <-
@@ -227,6 +230,7 @@ Página 4
 ==========================================
 
 ### Gráfico de barras simples sobre la cantidad de delitos por víctima.
+Fuente: [Datos abiertos Organismo de Investigación Judicial(OIJ)](https://sitiooij.poder-judicial.go.cr/index.php/ayuda/servicios-policiales/servicios-a-organizaciones/indice-de-transparencia-del-sector-publico-costarricense/datos-abiertos) [Instituto Geográfico Nacional(IGN)](https://gf0604-procesamientodatosgeograficos.github.io/2022-i/datos/ign/delimitacion-territorial-administrativa/cantones_simplificados.geojson)
 
 ```{r Gráfico cantidad de delitos por víctima, message=FALSE}
 Delitos_victima <-
@@ -251,6 +255,7 @@ Página 5
 ==========================================
 
 ### Gráfico de cantidad mensual de delitos.
+Fuente: [Datos abiertos Organismo de Investigación Judicial(OIJ)](https://sitiooij.poder-judicial.go.cr/index.php/ayuda/servicios-policiales/servicios-a-organizaciones/indice-de-transparencia-del-sector-publico-costarricense/datos-abiertos) [Instituto Geográfico Nacional(IGN)](https://gf0604-procesamientodatosgeograficos.github.io/2022-i/datos/ign/delimitacion-territorial-administrativa/cantones_simplificados.geojson)
 
 ```{r Cantidad delitos, message=FALSE}
 Delitos_mes <- Est_policiales %>%
@@ -277,6 +282,7 @@ Página 6
 ==========================================
 
 ### Gráfico barras apiladas de tipos de delito según la proporción por género.
+Fuente: [Datos abiertos Organismo de Investigación Judicial(OIJ)](https://sitiooij.poder-judicial.go.cr/index.php/ayuda/servicios-policiales/servicios-a-organizaciones/indice-de-transparencia-del-sector-publico-costarricense/datos-abiertos) [Instituto Geográfico Nacional(IGN)](https://gf0604-procesamientodatosgeograficos.github.io/2022-i/datos/ign/delimitacion-territorial-administrativa/cantones_simplificados.geojson)
 
 ```{r Proporción delitos por genero, message=FALSE}
 Propor_delit_gen <- Est_policiales %>%
